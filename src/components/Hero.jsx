@@ -55,13 +55,13 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="mt-8 lg:mt-0">
+      {/* <div className="mt-8 lg:mt-0">
         <img 
           src="/" 
           alt="Harnish Mori" 
           className="rounded-full h-80 lg:h-96 w-auto object-cover"
         />
-      </div>
+      </div> */}
     </section>
   );
 };
