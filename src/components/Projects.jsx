@@ -3,28 +3,28 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
-      video: "src/assets/images/GTAVI.mov",
+      video: "/GTAVI.mov",
       title: "GTA VI Landing Page",
       description:
         "A visually engaging landing page inspired by GTA VI, designed with modern layouts, animations, and responsive design principles to provide an immersive user experience.",
       technologies: ["HTML", "CSS", "Javascript"],
     },
     {
-      image: "src/assets/images/Edusity.png",
+      image: "/Edusity.png",
       title: "Educity Responsive Page",
       description:
         "A responsive education-themed webpage created with a mobile-first approach, ensuring seamless adaptability across devices with clean and modern UI.",
       technologies: ["HTML", "CSS", "Bootstrap"],
     },
     {
-      image: "src/assets/images/Python.png",
+      image: "/Python.png",
       title: "Household Rental (Python Full Stack)",
       description:
         "A full-stack rental management system built with Python and Django, featuring user authentication, property listings, and booking functionalities to simplify rental processes.",
       technologies: ["Python", "Django", "SQLite"],
     },
     {
-      image: "src/assets/images/Brainly.png",
+      image: "/Brainly.png",
       title: "Brainly (MERN Stack)",
       description:
         "A MERN stack project Brainly, enabling users to post different links at one place, share them with others, and interact in a collaborative environment.",
