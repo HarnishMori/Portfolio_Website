@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-scroll";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,16 +14,42 @@ const Navbar = () => {
     { to: "services", label: "Services" },
     { to: "contact", label: "Contact" },
   ];
+  const navRef = useRef(null);
+  const navLinkRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "power3.out",
+        duration: 1,
+      },
+    });
+    tl.from(navRef.current, {
+      y: -80,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    }).from(navLinkRef.current, {
+      opacity: 0,
+      y: -20,
+      stagger: 0.2,
+      duration: 0.6,
+      ease: "power2.out",
+    });
+  }, []);
 
   return (
-    <nav className="bg-slate-900/80 backdrop-blur-md sticky top-0 h-15 flex justify-between items-center px-4 z-50">
+    <nav
+      ref={navRef}
+      className="bg-slate-900/80 backdrop-blur-md sticky top-0 h-15 flex justify-between items-center px-4 z-50"
+    >
       {/* Logo */}
       <div className="text-xl font-semibold bg-gradient-to-r from-emerald-400 to-purple-300 bg-clip-text text-transparent font-serif">
         Harnish Mori
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-6">
+      <div ref={navLinkRef} className="hidden md:flex space-x-6">
         {navLinks.map((link, index) => (
           <Link
             key={index}

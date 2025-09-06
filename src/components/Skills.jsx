@@ -5,7 +5,7 @@ const Skills = () => {
     {
       icon: "fa-solid fa-globe",
       title: "Web Development",
-      skills: "HTML, CSS, JavaScript, React, Node js, Tailwind, TypeScript, Express"
+      skills: "HTML, CSS, JavaScript, React, Node js, Tailwind, TypeScript, Express, Next js"
     },
     {
       icon: "fa-solid fa-palette",

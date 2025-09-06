@@ -77,9 +77,9 @@ const Contact = () => {
               I'm always excited to meet new people and explore new opportunities.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-4 ">
               {socialLinks.map((social, index) => (
-                <div key={index} className="flex items-center p-4 border border-gray-500 rounded-lg bg-gray-50">
+                <div key={index} className="flex items-center p-4 border border-gray-500 rounded-lg bg-gray-300 hover:bg-white transform-all">
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-red-400/30 text-red-400 mr-4">
                     <i className={`${social.icon} text-lg`}></i>
                   </div>

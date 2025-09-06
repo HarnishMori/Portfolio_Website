@@ -1,23 +1,87 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Hero = () => {
+  const heroRef = useRef(null);
+  const headRef = useRef(null);
+  const textRef = useRef(null);
+  const buttonRef = useRef(null);
+  const iconRef = useRef(null);
+
+
+  useGSAP(()=>{
+    const tl = gsap.timeline({
+      defaults: {
+        ease: "power3.out",
+        duration: 1,
+      },
+    });
+
+    tl.from(heroRef.current, {
+      opacity: 0,
+    })
+      .from(
+        headRef.current,
+        {
+          opacity: 0,
+          y: 40,
+        },
+        "-=0.5"
+      )
+      .from(
+        textRef.current,
+        {
+          opacity: 0,
+          y: 30,
+        },
+        "-=0.4"
+      )
+      .from(
+        buttonRef.current.children,
+        {
+          opacity: 0,
+          y: 20,
+          stagger: 0.2,
+        },
+        "-=0.3"
+      )
+      .from(
+        iconRef.current.children,
+        {
+          opacity: 0,
+          scale: 0.5,
+          stagger: 0.1,
+        },
+        "-=0.5"
+      );
+  },[])
+
   return (
-    <section id="home" className="py-24 px-8 lg:px-32 bg-gray-50 flex flex-col lg:flex-row justify-around items-center min-h-screen">
+    <section
+      ref={heroRef}
+      id="home"
+      className="py-24 px-8 lg:px-32 bg-gray-50 flex flex-col lg:flex-row justify-around items-center min-h-screen"
+    >
       <div className="hero-left text-center lg:text-left">
-        <p className="text-lg text-gray-500 font-sans mb-4">Heyy! I am Harnish</p>
+        <p className="text-lg text-gray-500 font-sans mb-4">
+          Heyy! I am Harnish
+        </p>
         <h1 className="text-6xl lg:text-7xl leading-tight font-bold font-serif mb-4">
-          <span className="text-emerald-400">Full Stack</span>
+          <span ref={headRef} className="text-emerald-400">
+            Full Stack
+          </span>
           <br />
           Web Developer
         </h1>
-        <p className="text-lg text-gray-500 font-sans mb-8">
+        <p ref={textRef} className="text-lg text-gray-500 font-sans mb-8">
           I'm a passionate web developer based in India, creating
           <br />
           beautiful and functional websites that users will love.
         </p>
-        
+
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start space-y-4 lg:space-y-0 lg:space-x-8">
-          <div className="flex space-x-4">
+          <div ref={buttonRef} className="flex space-x-4">
             <button className="px-4 py-3 bg-red-400 text-gray-100 rounded-lg border-2 border-transparent hover:scale-105 transition-transform font-sans">
               Get In Touch
             </button>
@@ -25,8 +89,8 @@ const Hero = () => {
               Browse Projects
             </button>
           </div>
-          
-          <div className="flex space-x-4 mt-4 lg:mt-0">
+
+          <div ref={iconRef} className="flex space-x-4 mt-4 lg:mt-0">
             <a
               href="https://github.com/KanthariaDhruti"
               target="_blank"
@@ -54,7 +118,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* <div className="mt-8 lg:mt-0">
         <img 
           src="/" 

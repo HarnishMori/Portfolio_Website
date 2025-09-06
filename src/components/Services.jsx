@@ -16,11 +16,23 @@ const Services = () => {
       ],
     },
     {
-      icon: "fa-solid fa-palette",
+      icon: "fa-brands fa-python",
       title: "Python Django",
       description:
-        "Building Backend with django to improve the backend logic with focus on user experience.",
-      features: ["Fullstack", "Prototyping", "User Friendly"],
+        "Developing robust and scalable web applications using Django, leveraging Python’s versatility for clean, secure, and efficient backend systems with a strong focus on performance and user experience.",
+      features: [
+        "Full-Stack Development",
+        "Rapid Prototyping",
+        "Secure & Scalable",
+      ],
+    },
+
+    {
+      icon: "fa-solid fa-infinity",
+      title: "DevOps",
+      description:
+        "Streamlining the software development lifecycle by integrating development and operations through automation, CI/CD pipelines, cloud platforms.",
+      features: ["CI/CD Automation", "EC2", "Docker", "Monitoring & Logging"],
     },
   ];
 
