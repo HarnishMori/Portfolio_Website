@@ -29,7 +29,7 @@ const Navbar = () => {
       opacity: 0,
       duration: 0.8,
       ease: "power3.out",
-    }).from(navLinkRef.current, {
+    }).from(navLinkRef.current?.children, {
       opacity: 0,
       y: -20,
       stagger: 0.2,
@@ -45,7 +45,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div className="text-xl font-semibold bg-gradient-to-r from-emerald-400 to-purple-300 bg-clip-text text-transparent font-serif">
-            Harnish 
+        Harnish
       </div>
 
       {/* Desktop Menu */}
