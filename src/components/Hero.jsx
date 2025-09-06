@@ -74,7 +74,7 @@ const Hero = () => {
           <br />
           Web Developer
         </h1>
-        <p ref={textRef} className="text-lg text-gray-500 font-sans mb-8">
+        <p ref={textRef} className="text-xl text-gray-500 font-sans mb-8">
           I'm a passionate web developer based in India, creating
           <br />
           beautiful and functional websites that users will love.
@@ -92,18 +92,18 @@ const Hero = () => {
 
           <div ref={iconRef} className="flex space-x-4 mt-4 lg:mt-0">
             <a
-              href="https://github.com/KanthariaDhruti"
+              href="https://github.com/HarnishMori"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-red-400 cursor-pointer hover:scale-110 transition-transform"
+              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-10"
             >
               <i className="fa-brands fa-github"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/dhruti-kantharia-759700255/"
+              href="https://www.linkedin.com/in/harnishmori7031/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-red-400 cursor-pointer hover:scale-110 transition-transform"
+              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-10"
             >
               <i className="fa-brands fa-linkedin"></i>
             </a>
@@ -111,7 +111,7 @@ const Hero = () => {
               href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRtswJrTJzwNcnglvVgPnCJXTMXRWxDhrqHCmNWfhBfXzCxQsHxvZtphhGRkztBHNTgjZxl"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-red-400 cursor-pointer hover:scale-110 transition-transform"
+              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-10"
             >
               <i className="fa-solid fa-envelope"></i>
             </a>
