@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -9,8 +10,7 @@ const Hero = () => {
   const buttonRef = useRef(null);
   const iconRef = useRef(null);
 
-
-  useGSAP(()=>{
+  useGSAP(() => {
     const tl = gsap.timeline({
       defaults: {
         ease: "power3.out",
@@ -55,7 +55,7 @@ const Hero = () => {
         },
         "-=0.5"
       );
-  },[])
+  }, []);
 
   return (
     <section
@@ -82,12 +82,15 @@ const Hero = () => {
 
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start space-y-4 lg:space-y-0 lg:space-x-8">
           <div ref={buttonRef} className="flex space-x-4">
+            <Link to={"contact"} smooth={true} duration={500} offset={-50} >
             <button className="px-4 py-3 bg-red-400 text-gray-100 rounded-lg border-2 border-transparent hover:scale-105 transition-transform font-sans">
               Get In Touch
-            </button>
-            <button className="px-4 py-3 bg-red-400 text-gray-100 rounded-lg border-2 border-transparent hover:scale-105 transition-transform font-sans">
-              Browse Projects
-            </button>
+            </button></Link>
+            <Link to={"projects"} smooth={true} duration={500} offset={-50}>
+              <button className="px-4 py-3 bg-red-400 text-gray-100 rounded-lg border-2 border-transparent hover:scale-105 transition-transform font-sans">
+                Browse Projects
+              </button>
+            </Link>
           </div>
 
           <div ref={iconRef} className="flex space-x-4 mt-4 lg:mt-0">
