@@ -98,7 +98,7 @@ const Hero = () => {
               href="https://github.com/HarnishMori"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-10"
+              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-2"
             >
               <i className="fa-brands fa-github"></i>
             </a>
@@ -106,7 +106,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/harnishmori7031/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-10"
+              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-2"
             >
               <i className="fa-brands fa-linkedin"></i>
             </a>
@@ -114,7 +114,7 @@ const Hero = () => {
               href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRtswJrTJzwNcnglvVgPnCJXTMXRWxDhrqHCmNWfhBfXzCxQsHxvZtphhGRkztBHNTgjZxl"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-10"
+              className="text-6xl text-red-400 cursor-pointer hover:scale-110 transition-transform mt-2"
             >
               <i className="fa-solid fa-envelope"></i>
             </a>
